@@ -4,6 +4,7 @@ import radio
 
 # Code in a 'while True:' loop repeats forever
 radio.on()
+radio.config(group=32, power=7)
 display.show(Image('99999:'
                    '90000:'
                    '99999:'
@@ -12,4 +13,4 @@ display.show(Image('99999:'
 while True:
     soundLevel = microphone.sound_level()
     radio.send(str(soundLevel))
-    sleep(100)
+    sleep(200)
